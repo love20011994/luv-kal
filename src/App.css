@@ -1,0 +1,153 @@
+
+
+.App {
+    text-align: center;
+    
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+   
+  
+  
+  .tdhover:hover {
+    cursor: pointer;
+    background-color: rgb(214, 213, 205);
+    transition: background-color .5s;
+  }
+  
+  .label{
+     margin-left: -73%;
+     
+  }
+  .card-body{
+    background-color:ghostwhite;
+    box-shadow: 10px 10px 5px lightblue;
+    width: 100%;
+  }
+  .item{
+    border-radius: 4px;
+    color: #fff8f8;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    justify-content:space-evenly;
+  }
+  .item span{
+    
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    
+  }
+  /* .item span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  } */
+  .item:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  .item:hover span {
+    padding-right: 25px;
+  }
+  
+  .item:hover span:after {
+    opacity: 1;
+    bottom: 0;
+  } 
+   /* button.item:hover, a.ex2:active {font-size: 150%;
+  } */
+  /* progress */
+  .progressbar {
+    position: relative;
+    display: flex;
+    justify-content:space-evenly;
+    counter-reset: step;
+    margin: 2rem 0 4rem;
+  }
+  
+  .progressbar::before,
+  .progress {
+    content: "";
+    position: absolute;
+    top: 85%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 60%;
+    background-color: #dcdcdc;
+    
+  }
+  
+  .progress {
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: 0.3s;
+  }
+  
+  .progress-step {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color:#dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+  
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    color: rgb(102, 102, 102);
+  }
+  
+  .progress-step-active {
+    background-color: var(--primary-color);
+    color: #f3f3f3;
+  }
+  
+  .side-drawer { 
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    z-index: 200;
+    box-shadow: 1px 0px 7px rgba(0,0,0,0.5); 
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+  }
+  .side-drawer.open {
+    transform: translateX(0);
+  }
